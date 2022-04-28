@@ -169,7 +169,7 @@ int main(){
     dcomp i = {0, 1}, o = {0, 0}, I = {1, 0};
 
     
-    dcomp Omega_p = {1,0}, Omega_c = {0,0}, Omega_s = {0,0}, Gamma_21 = {6.1,0}, Gamma_32 = {0.68, 0}, Gamma_43 = {0.1,0}, Delta_s = {0,0},  Delta_c = {0,0}, Delta_p = {0, 0};
+    dcomp Omega_p = {1,0}, Omega_c = {10,0}, Omega_s = {5,0}, Gamma_21 = {6.1,0}, Gamma_32 = {0.68, 0}, Gamma_43 = {0.1,0}, Delta_s = {0,0},  Delta_c = {0,0}, Delta_p = {0, 0};
     
 	//dcomp arr[2][2] = {{{1,-2},{7,0}},{{-1,3},{-4,1}}};
     
@@ -177,7 +177,7 @@ int main(){
     //print((dcomp*)arr1,5,5);
     FILE *file;
 
-    file = fopen("data_Level_4_Real.txt","w");
+    file = fopen("data_Level_4_Real_1_10_5.txt","w");
     
     
 

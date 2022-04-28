@@ -200,23 +200,6 @@ void RK4(dcomp *arr, dcomp *x, double h, int n, FILE *file){
     }
 }
 
-/*
-    int n = 3;
-    double arr[n][n] = {{-2,-4,2},{-4,-4,2},{2,2,5}};
-    double b[n] = {2,1,3};
-    double x[n] = {1,1,1};
-    double v[n][n];
-    double ev[1][n];
-    Power_Method((double*) arr,(double*) ev, (double*) v, 3, 1e-4);
-    print((double*) arr, 3,3);
-    print((double*) v, 3,3);
-    for(int i = 0; i < n; i++){
-        cout<<ev[0][i]<<" -> [";
-        for(int j = 0; j < n; j++)
-            cout<<v[j][i]<<" ";
-        cout<<"]"<<endl;
-    }
-*/
 
 
 int main(){
@@ -224,7 +207,7 @@ int main(){
     dcomp i = {0, 1}, o = {0, 0};
 
     
-    dcomp Omega_p = {1,0}, Omega_c = {0,0}, Gamma_21 = {6.1,0}, Gamma_32 = {0.01, 0}, Gamma_31 = {0.001,0},  Delta_c = {0,0};
+    dcomp Omega_p = {1,0}, Omega_c = {10,0}, Gamma_21 = {6.1,0}, Gamma_32 = {0.01, 0}, Gamma_31 = {0.001,0},  Delta_c = {0,0};
     dcomp Gamma_2 = Gamma_31 + Gamma_32;
     dcomp Gamma_3 = Gamma_21 + Gamma_31 + Gamma_32;
     

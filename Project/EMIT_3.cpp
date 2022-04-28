@@ -281,7 +281,7 @@ int main(){
     dcomp i = {0, 1}, o = {0, 0}, I = {1, 0};
     dcomp x[8];
     
-    dcomp Omega_p = {1,0}, Omega_c = {0,0}, Gamma_21 = {6,0}, Gamma_32 = {0.1, 0}, Gamma_31 = {0.1,0},  Delta_c = {0,0}, Delta_p = {0, 0};
+    dcomp Omega_p = {1,0}, Omega_c = {0,0}, Gamma_21 = {6.1,0}, Gamma_32 = {0.001, 0}, Gamma_31 = {0.01,0},  Delta_c = {0,0}, Delta_p = {0, 0};
     dcomp Gamma_2 = Gamma_31 + Gamma_32;
     dcomp Gamma_3 = Gamma_21 + Gamma_31 + Gamma_32;
     
@@ -292,7 +292,7 @@ int main(){
     //print((dcomp*)arr1,5,5);
     FILE *file;
 
-	file = fopen("data_Level_3_Real.txt","w");
+	file = fopen("data_Level_3_Imag_1_0.txt","w");
     
 
     
@@ -312,8 +312,8 @@ int main(){
         //mat[k][1] = real(b[2]);
 		fprintf(file,"%lf	",double(k*h-100));
         for(int j = 0; j < n; j++)
-            fprintf(file,"%lf	",real(b[j]));
-			fprintf(file,"%lf	",real(I-b[0]-b[4]));
+            fprintf(file,"%lf	",imag(b[j]));
+			fprintf(file,"%lf	",imag(I-b[0]-b[4]));
         fprintf(file,"	\n");
         // fprintf(file,"%lf	%lf\n",double(k*h-100),imag(b[6]));
         
